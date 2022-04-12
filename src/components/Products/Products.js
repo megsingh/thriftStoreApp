@@ -48,9 +48,6 @@ const ProductList = () => {
     })
   }
 
-  const addToWishlist = (id) => {
-
-  }
 
   const deliveredStyle = {
     color: "green",
@@ -72,7 +69,7 @@ const ProductList = () => {
         <h1>Products</h1>
         <div>
           <Link className='new__product' to="/products/add">
-            <img className='add__icon' src={plusicon} alt="add product" /></Link>
+            <img className='add__icon' src="https://cdn.onlinewebfonts.com/svg/img_84809.png" alt="add product" /></Link>
         </div>
       </header>
       <ul className='product__list'>
@@ -90,7 +87,6 @@ const ProductList = () => {
                   </div>
                     <div>
                      {!item.delivered && <button onClick={() => handleEdit(item._id)} className='product__button'>Update delivery status</button>} 
-                    <button onClick={() => addToWishlist(item._id)}>Add to Wishlist</button>
                     <button onClick={() => handleDelete(item._id)} className='product__button'>Delete</button>
                   
                   </div>

@@ -41,8 +41,8 @@ const ProductList = () => {
     })
   }
 
-  const handleEdit = (id) => {
-    axios.put(`https://product-app-server.herokuapp.com/api/products/edit/${id}`,{},config).then(res => {
+  const handleEdit = (index) => {
+    axios.put(`https://product-app-server.herokuapp.com/api/products/edit/${index}`,{},config).then(res => {
       console.log("res", res);
       window.location.href = "/products";
     })
